@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LibraryGames
 {
-    public partial class frmSplash : Form
+    public partial class frmBrowseGames : Form
     {
-        public frmSplash()
+        public frmBrowseGames()
         {
             InitializeComponent();
         }

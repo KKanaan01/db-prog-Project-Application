@@ -34,6 +34,7 @@
             txtUserName = new TextBox();
             txtPassword = new TextBox();
             btnClose = new Button();
+            btnLogin = new Button();
             SuspendLayout();
             // 
             // label1
@@ -92,11 +93,22 @@
             btnClose.UseVisualStyleBackColor = true;
             btnClose.Click += btnClose_Click;
             // 
+            // btnLogin
+            // 
+            btnLogin.Location = new Point(234, 251);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(101, 45);
+            btnLogin.TabIndex = 6;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
+            // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(575, 263);
+            ClientSize = new Size(575, 308);
+            Controls.Add(btnLogin);
             Controls.Add(btnClose);
             Controls.Add(txtPassword);
             Controls.Add(txtUserName);
@@ -119,5 +131,6 @@
         private TextBox txtUserName;
         private TextBox txtPassword;
         private Button btnClose;
+        private Button btnLogin;
     }
 }

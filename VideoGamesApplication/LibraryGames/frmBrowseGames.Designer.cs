@@ -1,6 +1,6 @@
 ﻿namespace LibraryGames
 {
-    partial class frmSplash
+    partial class frmBrowseGames
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSplash));
-            label1 = new Label();
             SuspendLayout();
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Snap ITC", 24F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Red;
-            label1.Location = new Point(66, 155);
-            label1.Name = "label1";
-            label1.Size = new Size(513, 51);
-            label1.TabIndex = 0;
-            label1.Text = "Welcome to Game Hub";
-            // 
-            // frmSplash
+            // frmBrowseGames
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(657, 368);
-            Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "frmSplash";
-            Text = "Video Games";
+            ClientSize = new Size(869, 483);
+            Name = "frmBrowseGames";
+            Text = "frmBrowseGames";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
     }
 }
