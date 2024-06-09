@@ -16,5 +16,71 @@ namespace LibraryGames
         {
             InitializeComponent();
         }
+
+        private void frmBrowseGames_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadGames();
+                dgvGames.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                DisplayCatchMessage(ex);
+            }
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(cmbGameList.SelectedIndex <= 0)
+                {
+                    MessageBox.Show("Please Select a Game");
+                }
+                else
+                {
+
+                    string? selectedGame = cmbGameList.SelectedValue.ToString();
+
+                    string sql = $@"Select Title,PlatformName,
+                    [Platform].ReleaseDate , Manufacturer, [Description],
+                    [Platform].Price 
+                    FROM Game INNER JOIN [Platform]
+                    ON Game.GameID = [Platform].PlatformID
+                    WHERE GameID = {selectedGame}";
+
+                    DataTable dtGamePlats = DataAccess.GetData(sql);
+
+                    dgvGames.Visible = true;
+                    dgvGames.DataSource = dtGamePlats;
+                    dgvGames.ReadOnly = true;
+                    dgvGames.AutoResizeColumns();
+                }
+            }
+            catch(Exception ex)
+            {
+                DisplayCatchMessage(ex);
+            }
+        }
+
+
+        #region Methods
+
+        private void LoadGames()
+        {
+            string sql = "SELECT GameId, Title FROM Game ORDER BY Title";
+            DataTable dt = DataAccess.GetData(sql);
+
+            dt.AddEmptyRow("Title", "GameId" , 0);
+            cmbGameList.Bind("Title", "GameId", dt);
+        }
+
+        private void DisplayCatchMessage(Exception ex)
+        {
+            MessageBox.Show(ex.Message, ex.GetType().ToString());
+        }
+
+        #endregion
     }
 }

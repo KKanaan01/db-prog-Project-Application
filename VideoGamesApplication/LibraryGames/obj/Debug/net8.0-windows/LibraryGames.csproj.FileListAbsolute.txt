@@ -30,3 +30,4 @@ C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\
 C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\obj\Debug\net8.0-windows\LibraryG.050883B5.Up2Date
 C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\obj\Debug\net8.0-windows\LibraryGames.frmMDI.resources
 C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\obj\Debug\net8.0-windows\LibraryGames.frmBrowseGames.resources
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\obj\Debug\net8.0-windows\LibraryGames.frmBrowsePlatforms.resources
