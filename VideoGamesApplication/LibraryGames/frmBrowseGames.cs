@@ -43,12 +43,15 @@ namespace LibraryGames
 
                     string? selectedGame = cmbGameList.SelectedValue.ToString();
 
-                    string sql = $@"Select Title,PlatformName,
-                    [Platform].ReleaseDate , Manufacturer, [Description],
-                    [Platform].Price 
-                    FROM Game INNER JOIN [Platform]
-                    ON Game.GameID = [Platform].PlatformID
-                    WHERE GameID = {selectedGame}";
+                    string sql = $@"SELECT p.PlatformName,
+                            p.ReleaseDate,
+                            p.Manufacturer,
+                            p.[Description],
+                            p.Price
+                     FROM Game g
+                     INNER JOIN Library_Games lg ON g.GameID = lg.GameID
+                     INNER JOIN Platform p ON lg.PlatformID = p.PlatformID
+                     WHERE g.GameID = {selectedGame}";
 
                     DataTable dtGamePlats = DataAccess.GetData(sql);
 
@@ -63,7 +66,6 @@ namespace LibraryGames
                 DisplayCatchMessage(ex);
             }
         }
-
 
         #region Methods
 

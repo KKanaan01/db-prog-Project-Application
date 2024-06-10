@@ -43,11 +43,19 @@ namespace LibraryGames
 
                     string? selectedPlatform = cmbPlatformList.SelectedValue.ToString();
 
-                    string sql = $@"SELECT Title, Game.ReleaseDate, Publisher,
-                        Genre, Game.Price , Rating
-                        FROM [Platform] INNER JOIN Game 
-                        ON [Platform].PlatformID = Game.GameID
-                        WHERE PlatformId = {selectedPlatform}";
+                    string sql = $@"SELECT 
+                            g.Title,
+                            g.ReleaseDate AS GameReleaseDate,
+                            g.Publisher,
+                            g.Price AS GamePrice,
+                            g.Genre,
+                            g.Rating,
+                            g.DownloadSize
+                     FROM Platform p
+                     INNER JOIN Library_Games lg ON p.PlatformID = lg.PlatformID
+                     INNER JOIN Game g ON lg.GameID = g.GameID
+	                    WHERE p.PlatformID = {selectedPlatform}
+                     ORDER BY p.PlatformName, g.Title";
 
                     DataTable dtGamePlats = DataAccess.GetData(sql);
 
