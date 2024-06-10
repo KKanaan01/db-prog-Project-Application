@@ -112,6 +112,7 @@ namespace LibraryGames
                 {
                     if (ValidateChildren())
                     {
+                        
                         if (txtGameID.Text == string.Empty)
                         {
                             CreateGame();
@@ -315,7 +316,7 @@ ORDER BY Title ASC;";
         private void DisplayPosition()
         {
             DataTable dt = DataAccess.GetData("SELECT * FROM Game");
-            this.DisplayParentStatusStripMessage($"Loaded {rowNumber} out of {dt.Rows.Count}");
+            this.DisplayParentStatusStripMessage($"Loaded {rowNumber} out of {dt.Rows.Count} Games");
         }
         #endregion
 

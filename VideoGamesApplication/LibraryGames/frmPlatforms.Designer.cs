@@ -264,7 +264,7 @@
             grpPlats.Size = new Size(447, 484);
             grpPlats.TabIndex = 22;
             grpPlats.TabStop = false;
-            grpPlats.Text = "groupBox1";
+            grpPlats.Text = "Information";
             // 
             // frmPlatforms
             // 

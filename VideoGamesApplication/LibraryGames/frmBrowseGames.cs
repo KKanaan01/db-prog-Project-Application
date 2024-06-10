@@ -23,6 +23,7 @@ namespace LibraryGames
             {
                 LoadGames();
                 dgvGames.Visible = false;
+                this.DisplayParentStatusStripMessage("Showing Browse Games form...");
             }
             catch (Exception ex)
             {

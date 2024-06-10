@@ -34,6 +34,7 @@ namespace LibraryGames
             {
                 LoadFirstPlatform();
                 SetState(FormState.View);
+                
             }
             catch (Exception ex)
             {
@@ -228,7 +229,7 @@ ORDER BY PlatformName ASC";
             txtDesc.Text = selectedRow["Description"].ToString();
             txtPrice.Text = selectedRow["Price"].ToString();
 
-            this.DisplayParentStatusStripMessage("Now showing Platforms form...");
+            DisplayPosition();
         }
         #endregion
 
@@ -299,6 +300,12 @@ ORDER BY PlatformName ASC";
         private void DisplayCatchMessage(Exception ex)
         {
             MessageBox.Show(ex.Message, ex.GetType().ToString());
+        }
+
+        private void DisplayPosition()
+        {
+            DataTable dt = DataAccess.GetData("SELECT * FROM Platform");
+            this.DisplayParentStatusStripMessage($"Loaded {rowNumber} out of {dt.Rows.Count} Platforms");
         }
         #endregion
 

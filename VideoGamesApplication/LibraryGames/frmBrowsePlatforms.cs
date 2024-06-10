@@ -23,6 +23,7 @@ namespace LibraryGames
             {
                 LoadPlatforms();
                 dgvPlats.Visible = false;
+                this.DisplayParentStatusStripMessage("Shwoing Browse Platforms form...");
             }
             catch (Exception ex)
             {

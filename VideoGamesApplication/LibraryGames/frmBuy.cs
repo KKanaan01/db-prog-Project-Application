@@ -20,6 +20,7 @@ namespace LibraryGames
         private DataTable dtGames;
         private decimal totalAmount = 0;
         private decimal discount;
+        private List<GamePlatform> GameLists = new();
 
         #region Event Handlers
         private void frmBuy_Load(object sender, EventArgs e)
@@ -50,7 +51,9 @@ namespace LibraryGames
         {
             try
             {
-
+                BuyGame();
+                GameLists.Clear();
+                txtTotal.Text = string.Empty;
             }
             catch (Exception ex)
             {
@@ -115,9 +118,13 @@ namespace LibraryGames
                 decimal price = GetGamePrice();
 
                 lstCart.Items.Add($"{game} - on {platform} - Price: {price:C}");
+                GamePlatform gamePlat = new GamePlatform(Convert.ToInt32(cmbGames.SelectedValue) , Convert.ToInt32(cmbPlatforms.SelectedValue));
+                
+                GameLists.Add(gamePlat);
 
                 totalAmount += price;
                 txtTotal.Text = totalAmount.ToString("c");
+
             }
         }
 
@@ -168,8 +175,34 @@ namespace LibraryGames
 
         private void BuyGame()
         {
-            //do something
+            string sql = $@"INSERT INTO Library_Games (GameID,PlatformID)
+                        VALUES
+                            {string.Join(", " , getIds(GameLists))}
+                        ";
+
+            int rowsAffected = DataAccess.SendData(sql);
+
+            if (rowsAffected >= 1)
+            {
+                MessageBox.Show("Purchase sucessful");
+            }
+            else
+            {
+                MessageBox.Show("Purchase failed");
+            }
         }
+        private List<string> getIds(List<GamePlatform> list)
+        {
+            List<string> result = new List<string>();
+
+            foreach (GamePlatform platform in list)
+            {
+                result.Add($"({platform.GameID}, {platform.PlatformID})");
+            }
+
+            return result;
+        }
+
         #endregion
 
         #region Make it easier methods
