@@ -87,6 +87,7 @@ namespace LibraryGames
         {
             SetState(FormState.Add);
             txtGameID.ReadOnly = true;
+            this.DisplayParentStatusStripMessage("Adding...");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -116,7 +117,13 @@ namespace LibraryGames
                             CreateGame();
                             LoadFirstGame();
                         }
+                        else
+                        {
+                            UpdateGame();
+                        }
+
                         SetState(FormState.View);
+                        DisplayPosition();
                     }
                     else
                     {
@@ -229,6 +236,8 @@ ORDER BY Title ASC;";
             txtSize.Text = selectedRow["DownloadSize"].ToString();
             txtRating.Text = selectedRow["Rating"].ToString();
 
+            DisplayPosition();
+
         }
         #endregion
 
@@ -302,6 +311,12 @@ ORDER BY Title ASC;";
         {
             MessageBox.Show(ex.Message, ex.GetType().ToString());
         }
+
+        private void DisplayPosition()
+        {
+            DataTable dt = DataAccess.GetData("SELECT * FROM Game");
+            this.DisplayParentStatusStripMessage($"Loaded {rowNumber} out of {dt.Rows.Count}");
+        }
         #endregion
 
         #region Action Methods
@@ -355,6 +370,35 @@ ORDER BY Title ASC;";
             else
             {
                 MessageBox.Show("No rows affected");
+            }
+        }
+
+        private void UpdateGame()
+        {
+            string sql = $@"UPDATE Game
+            SET 
+            Title = '{txtTitle.Text}',
+            ReleaseDate = '{txtDate.Text}',
+            Publisher = '{txtPublisher.Text}',
+            Price = '{txtPrice.Text}',
+            Genre = '{txtGenre.Text}',
+            Rating = '{txtRating.Text}',
+            DownloadSize = '{txtSize.Text}'
+            WHERE GameID = {txtGameID.Text}";
+
+            int rowsAffected = DataAccess.SendData(sql);
+
+            if (rowsAffected == 0)
+            {
+                MessageBox.Show("No rows affected");
+            }
+            else if (rowsAffected == 1)
+            {
+                MessageBox.Show("Game has been updated");
+            }
+            else
+            {
+                MessageBox.Show("Something went wrong");
             }
         }
         #endregion

@@ -18,7 +18,8 @@ namespace LibraryGames
         }
 
         private DataTable dtGames;
-        private decimal totalAmount;
+        private decimal totalAmount = 0;
+        private decimal discount;
 
         #region Event Handlers
         private void frmBuy_Load(object sender, EventArgs e)
@@ -45,6 +46,36 @@ namespace LibraryGames
                 DisplayCatchMessage(ex);
             }
         }
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                DisplayCatchMessage(ex);
+            }
+        }
+
+        private void btnDisc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lstCart.Items.Count <= 0)
+                {
+                    MessageBox.Show("Please add games to your cart");
+                }
+                else
+                {
+                    CheckForDiscounts(); 
+                }
+            }
+            catch (Exception ex)
+            {
+                DisplayCatchMessage(ex);
+            }
+        }
         #endregion
 
 
@@ -53,7 +84,7 @@ namespace LibraryGames
         private void LoadGames()
         {
             string sql = "SELECT Title , GameId , Price FROM Game ORDER BY Title";
-             dtGames = DataAccess.GetData(sql);
+            dtGames = DataAccess.GetData(sql);
 
             dtGames.AddEmptyRow("Title", "GameId", 0);
             cmbGames.Bind("Title", "GameId", dtGames);
@@ -73,7 +104,7 @@ namespace LibraryGames
         #region Action Methods
         private void AddToCart()
         {
-            if(cmbGames.SelectedIndex <= 0 || cmbPlatforms.SelectedIndex <= 0)
+            if (cmbGames.SelectedIndex <= 0 || cmbPlatforms.SelectedIndex <= 0)
             {
                 MessageBox.Show("Please choose a game and platform");
             }
@@ -100,6 +131,44 @@ namespace LibraryGames
 
             price += Convert.ToDecimal(dtPrice.Rows[0]["Price"]);
             return price;
+        }
+
+        private void CheckForDiscounts()
+        {
+            string sql = "SELECT COUNT(*) FROM Library_Games";
+            int count = Convert.ToInt32(DataAccess.GetValue(sql));
+
+            decimal gamesPurchased = count % 5;
+
+
+            if (lstCart.Items.Count >= 2)
+            {
+                discount = 0.25m * totalAmount;
+                totalAmount -= discount;
+
+                MessageBox.Show("25% discount will be applied");
+                txtTotal.Text = totalAmount.ToString("c");
+            }
+            else if (gamesPurchased == 0 && lstCart.Items.Count > 0)
+            {
+                discount = 0.1m * totalAmount;
+                totalAmount -= discount;
+
+                MessageBox.Show("10% discount applied after 5 games purchased");
+                txtTotal.Text = totalAmount.ToString("c");
+            }
+            else
+            {
+                MessageBox.Show("No discount applied");
+
+            }
+
+            btnDisc.Enabled = false;
+        }
+
+        private void BuyGame()
+        {
+            //do something
         }
         #endregion
 

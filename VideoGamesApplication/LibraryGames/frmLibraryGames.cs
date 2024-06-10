@@ -34,6 +34,7 @@ namespace LibraryGames
         int? nextPlatformId;
 
         private FormState currentState;
+
         #endregion
 
         #region Event Handlers
@@ -293,8 +294,6 @@ namespace LibraryGames
         #endregion
 
         #region Display Data
-
-
         private void DisplayCurrentLibraryGame()
         {
             DataTable dtLibraryGame = GetLibraryGameData();
@@ -391,5 +390,6 @@ namespace LibraryGames
             MessageBox.Show(ex.Message, ex.GetType().ToString());
         }
         #endregion
+
     }
 }

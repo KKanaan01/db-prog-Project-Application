@@ -56,6 +56,7 @@
             statusStrip = new StatusStrip();
             toolStripStatusLabel = new ToolStripStatusLabel();
             toolTip = new ToolTip(components);
+            libraryGamesToolStripMenuItem = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             toolStrip.SuspendLayout();
             statusStrip.SuspendLayout();
@@ -100,7 +101,7 @@
             // 
             // maintenanceToolStripMenuItem
             // 
-            maintenanceToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gamesToolStripMenuItem, platformsToolStripMenuItem, browseGamesToolStripMenuItem, browsePlatformsToolStripMenuItem, buyGamesToolStripMenuItem });
+            maintenanceToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gamesToolStripMenuItem, platformsToolStripMenuItem, libraryGamesToolStripMenuItem, browseGamesToolStripMenuItem, browsePlatformsToolStripMenuItem, buyGamesToolStripMenuItem });
             maintenanceToolStripMenuItem.Name = "maintenanceToolStripMenuItem";
             maintenanceToolStripMenuItem.Size = new Size(108, 24);
             maintenanceToolStripMenuItem.Text = "Maintenance";
@@ -255,8 +256,16 @@
             // toolStripStatusLabel
             // 
             toolStripStatusLabel.Name = "toolStripStatusLabel";
-            toolStripStatusLabel.Size = new Size(49, 20);
-            toolStripStatusLabel.Text = "Status";
+            toolStripStatusLabel.Size = new Size(168, 20);
+            toolStripStatusLabel.Text = "Welcome to Game Hub!";
+            // 
+            // libraryGamesToolStripMenuItem
+            // 
+            libraryGamesToolStripMenuItem.Name = "libraryGamesToolStripMenuItem";
+            libraryGamesToolStripMenuItem.Size = new Size(224, 26);
+            libraryGamesToolStripMenuItem.Tag = "library";
+            libraryGamesToolStripMenuItem.Text = "Library Games";
+            libraryGamesToolStripMenuItem.Click += ShowNewForm;
             // 
             // frmMDI
             // 
@@ -291,7 +300,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolStripMenuItem tileHorizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileMenu;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
@@ -311,6 +319,8 @@
         private ToolStripMenuItem browseGamesToolStripMenuItem;
         private ToolStripMenuItem browsePlatformsToolStripMenuItem;
         private ToolStripMenuItem buyGamesToolStripMenuItem;
+        internal ToolStripStatusLabel toolStripStatusLabel;
+        private ToolStripMenuItem libraryGamesToolStripMenuItem;
     }
 }
 

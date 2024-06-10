@@ -3,6 +3,7 @@
 */
 
 USE [master]
+GO
 
 IF EXISTS (
         SELECT *
@@ -102,7 +103,7 @@ VALUES
 (4, 9),  
 (5, 4),  
 (5, 8),  
-(6, 10), 
+(5,3), 
 (6, 1),  
 (6, 2),  
 (6, 3),  
@@ -124,7 +125,6 @@ VALUES
 (10, 7), 
 (11, 2), 
 (12, 10),
-(1, 4), 
 (1, 5),  
 (1, 8),  
 (1, 9); 
@@ -132,3 +132,4 @@ VALUES
 INSERT INTO [LogIn] (UserName, [Password])
 VALUES
 ('Kenaan7', 'Kn3n1234');
+

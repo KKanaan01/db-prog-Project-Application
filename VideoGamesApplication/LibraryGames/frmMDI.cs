@@ -45,6 +45,9 @@ namespace LibraryGames
                 case "buy":
                     childForm = new frmBuy();
                     break;
+                case "library":
+                    childForm = new frmLibraryGames();
+                    break;
             }
 
             if (childForm != null)
@@ -143,28 +146,41 @@ namespace LibraryGames
 
         private void frmMDIParent_Load(object sender, EventArgs e)
         {
-            frmSplash splash = new frmSplash();
-            frmLogin login = new frmLogin();
 
-            splash.ShowDialog();
+            //frmSplash splash = new frmSplash();
+            //frmLogin login = new frmLogin();
 
-            if (splash.DialogResult != DialogResult.OK)
-            {
-                this.Close();
-            }
-            else
-            {
-                login.ShowDialog();
-            }
+            //splash.ShowDialog();
 
-            if (login.DialogResult != DialogResult.OK)
-            {
-                this.Close();
-            }
-            else
-            {
-                this.Show();
-            }
+            //if (splash.DialogResult != DialogResult.OK)
+            //{
+            //    this.Close();
+            //}
+            //else
+            //{
+            //    login.ShowDialog();
+            //}
+
+            //if (login.DialogResult != DialogResult.OK)
+            //{
+            //    this.Close();
+            //}
+            //else
+            //{
+            //    this.Show();
+            //}
+        }
+
+
+        public void DisplayStatusMessage(string message)
+        {
+            DisplayStatusMessage(message, Color.Black);
+        }
+
+        public void DisplayStatusMessage(string message , Color color)
+        {
+            this.toolStripStatusLabel.Text = message;
+            this.toolStripStatusLabel.ForeColor = color;
         }
     }
 }

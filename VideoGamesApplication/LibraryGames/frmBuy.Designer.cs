@@ -37,6 +37,7 @@
             btnBuy = new Button();
             label1 = new Label();
             label2 = new Label();
+            btnDisc = new Button();
             SuspendLayout();
             // 
             // cmbGames
@@ -91,12 +92,13 @@
             // 
             // btnBuy
             // 
-            btnBuy.Location = new Point(932, 206);
+            btnBuy.Location = new Point(902, 274);
             btnBuy.Name = "btnBuy";
-            btnBuy.Size = new Size(101, 55);
+            btnBuy.Size = new Size(151, 65);
             btnBuy.TabIndex = 6;
             btnBuy.Text = "Purchase";
             btnBuy.UseVisualStyleBackColor = true;
+            btnBuy.Click += btnBuy_Click;
             // 
             // label1
             // 
@@ -116,11 +118,22 @@
             label2.TabIndex = 8;
             label2.Text = "Select Platform";
             // 
+            // btnDisc
+            // 
+            btnDisc.Location = new Point(893, 188);
+            btnDisc.Name = "btnDisc";
+            btnDisc.Size = new Size(173, 49);
+            btnDisc.TabIndex = 9;
+            btnDisc.Text = "Check for discounts";
+            btnDisc.UseVisualStyleBackColor = true;
+            btnDisc.Click += btnDisc_Click;
+            // 
             // frmBuy
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1094, 450);
+            Controls.Add(btnDisc);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnBuy);
@@ -148,5 +161,6 @@
         private Button btnBuy;
         private Label label1;
         private Label label2;
+        private Button btnDisc;
     }
 }

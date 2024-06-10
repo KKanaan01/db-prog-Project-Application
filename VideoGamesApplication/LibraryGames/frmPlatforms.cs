@@ -227,6 +227,8 @@ ORDER BY PlatformName ASC";
             txtManufacturer.Text = selectedRow["Manufacturer"].ToString();
             txtDesc.Text = selectedRow["Description"].ToString();
             txtPrice.Text = selectedRow["Price"].ToString();
+
+            this.DisplayParentStatusStripMessage("Now showing Platforms form...");
         }
         #endregion
 

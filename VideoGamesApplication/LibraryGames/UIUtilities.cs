@@ -57,5 +57,20 @@ namespace LibraryGames
                 }
             }
         }
+
+        public static void DisplayParentStatusStripMessage(this Form form , string message)
+        {
+            DisplayParentStatusStripMessage(form, message, Color.Black);
+        }
+
+        public static void DisplayParentStatusStripMessage(this Form form , string message, Color color)
+        {
+            frmMDI? parentMdi = form.MdiParent as frmMDI;
+
+            if (parentMdi != null)
+            {
+                parentMdi.DisplayStatusMessage(message, color);
+            }
+        }
     }
 }
