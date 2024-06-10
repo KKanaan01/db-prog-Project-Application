@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            grpBuyGame = new GroupBox();
-            label1 = new Label();
-            txtBuyPrice = new TextBox();
-            btnBuy = new Button();
             grpNavigation = new GroupBox();
             btnCancel = new Button();
             btnSave = new Button();
@@ -57,46 +53,8 @@
             txtGenre = new TextBox();
             txtTitle = new TextBox();
             txtGameID = new TextBox();
-            grpBuyGame.SuspendLayout();
             grpNavigation.SuspendLayout();
             SuspendLayout();
-            // 
-            // grpBuyGame
-            // 
-            grpBuyGame.Controls.Add(label1);
-            grpBuyGame.Controls.Add(txtBuyPrice);
-            grpBuyGame.Controls.Add(btnBuy);
-            grpBuyGame.Location = new Point(992, 224);
-            grpBuyGame.Name = "grpBuyGame";
-            grpBuyGame.Size = new Size(458, 292);
-            grpBuyGame.TabIndex = 0;
-            grpBuyGame.TabStop = false;
-            grpBuyGame.Text = "Buy Game";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(199, 201);
-            label1.Name = "label1";
-            label1.Size = new Size(41, 20);
-            label1.TabIndex = 1;
-            label1.Text = "Price";
-            // 
-            // txtBuyPrice
-            // 
-            txtBuyPrice.Location = new Point(158, 224);
-            txtBuyPrice.Name = "txtBuyPrice";
-            txtBuyPrice.Size = new Size(138, 27);
-            txtBuyPrice.TabIndex = 2;
-            // 
-            // btnBuy
-            // 
-            btnBuy.Location = new Point(142, 67);
-            btnBuy.Name = "btnBuy";
-            btnBuy.Size = new Size(177, 84);
-            btnBuy.TabIndex = 1;
-            btnBuy.Text = "Buy Game";
-            btnBuy.UseVisualStyleBackColor = true;
             // 
             // grpNavigation
             // 
@@ -343,22 +301,17 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1526, 788);
+            ClientSize = new Size(910, 788);
             Controls.Add(grpNavigation);
-            Controls.Add(grpBuyGame);
             Name = "frmGames";
             Text = "Games";
             Load += frmGames_Load;
-            grpBuyGame.ResumeLayout(false);
-            grpBuyGame.PerformLayout();
             grpNavigation.ResumeLayout(false);
             grpNavigation.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private GroupBox grpBuyGame;
         private GroupBox grpNavigation;
         private TextBox txtRating;
         private TextBox txtDate;
@@ -384,8 +337,5 @@
         private Button btnNext;
         private Button btnPrevious;
         private Button btnFirst;
-        private Button btnBuy;
-        private Label label1;
-        private TextBox txtBuyPrice;
     }
 }

@@ -339,6 +339,7 @@ ORDER BY Title ASC;";
             {
                 MessageBox.Show("Game could not be created");
             }
+
         }
 
         private void DeleteGame()

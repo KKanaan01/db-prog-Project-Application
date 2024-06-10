@@ -31,3 +31,5 @@ C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\
 C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\obj\Debug\net8.0-windows\LibraryGames.frmMDI.resources
 C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\obj\Debug\net8.0-windows\LibraryGames.frmBrowseGames.resources
 C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\obj\Debug\net8.0-windows\LibraryGames.frmBrowsePlatforms.resources
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\obj\Debug\net8.0-windows\LibraryGames.frmLibraryGames.resources
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\obj\Debug\net8.0-windows\LibraryGames.frmBuy.resources

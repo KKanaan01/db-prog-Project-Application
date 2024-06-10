@@ -61,6 +61,11 @@ namespace LibraryGames
             return rowsAffected;
         }
 
+        public static int? GetInteger(this DataRow dataRow, string columnName)
+        {
+            return dataRow[columnName] != DBNull.Value ? Convert.ToInt32(dataRow[columnName]) : null;
+        }
+
         private static string getConnectionString()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["Games"].ConnectionString;

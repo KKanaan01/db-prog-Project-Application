@@ -37,6 +37,9 @@
             maintenanceToolStripMenuItem = new ToolStripMenuItem();
             gamesToolStripMenuItem = new ToolStripMenuItem();
             platformsToolStripMenuItem = new ToolStripMenuItem();
+            browseGamesToolStripMenuItem = new ToolStripMenuItem();
+            browsePlatformsToolStripMenuItem = new ToolStripMenuItem();
+            buyGamesToolStripMenuItem = new ToolStripMenuItem();
             viewMenu = new ToolStripMenuItem();
             toolBarToolStripMenuItem = new ToolStripMenuItem();
             statusBarToolStripMenuItem = new ToolStripMenuItem();
@@ -66,7 +69,7 @@
             menuStrip.MdiWindowListItem = windowsMenu;
             menuStrip.Name = "menuStrip";
             menuStrip.Padding = new Padding(8, 3, 0, 3);
-            menuStrip.Size = new Size(843, 30);
+            menuStrip.Size = new Size(1323, 30);
             menuStrip.TabIndex = 0;
             menuStrip.Text = "MenuStrip";
             // 
@@ -97,7 +100,7 @@
             // 
             // maintenanceToolStripMenuItem
             // 
-            maintenanceToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gamesToolStripMenuItem, platformsToolStripMenuItem });
+            maintenanceToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gamesToolStripMenuItem, platformsToolStripMenuItem, browseGamesToolStripMenuItem, browsePlatformsToolStripMenuItem, buyGamesToolStripMenuItem });
             maintenanceToolStripMenuItem.Name = "maintenanceToolStripMenuItem";
             maintenanceToolStripMenuItem.Size = new Size(108, 24);
             maintenanceToolStripMenuItem.Text = "Maintenance";
@@ -105,7 +108,7 @@
             // gamesToolStripMenuItem
             // 
             gamesToolStripMenuItem.Name = "gamesToolStripMenuItem";
-            gamesToolStripMenuItem.Size = new Size(155, 26);
+            gamesToolStripMenuItem.Size = new Size(224, 26);
             gamesToolStripMenuItem.Tag = "Games";
             gamesToolStripMenuItem.Text = "Games";
             gamesToolStripMenuItem.Click += ShowNewForm;
@@ -113,10 +116,34 @@
             // platformsToolStripMenuItem
             // 
             platformsToolStripMenuItem.Name = "platformsToolStripMenuItem";
-            platformsToolStripMenuItem.Size = new Size(155, 26);
+            platformsToolStripMenuItem.Size = new Size(224, 26);
             platformsToolStripMenuItem.Tag = "Platforms";
             platformsToolStripMenuItem.Text = "Platforms";
             platformsToolStripMenuItem.Click += ShowNewForm;
+            // 
+            // browseGamesToolStripMenuItem
+            // 
+            browseGamesToolStripMenuItem.Name = "browseGamesToolStripMenuItem";
+            browseGamesToolStripMenuItem.Size = new Size(224, 26);
+            browseGamesToolStripMenuItem.Tag = "brwsGames";
+            browseGamesToolStripMenuItem.Text = "Browse Games";
+            browseGamesToolStripMenuItem.Click += ShowNewForm;
+            // 
+            // browsePlatformsToolStripMenuItem
+            // 
+            browsePlatformsToolStripMenuItem.Name = "browsePlatformsToolStripMenuItem";
+            browsePlatformsToolStripMenuItem.Size = new Size(224, 26);
+            browsePlatformsToolStripMenuItem.Tag = "brwsePlats";
+            browsePlatformsToolStripMenuItem.Text = "Browse Platforms";
+            browsePlatformsToolStripMenuItem.Click += ShowNewForm;
+            // 
+            // buyGamesToolStripMenuItem
+            // 
+            buyGamesToolStripMenuItem.Name = "buyGamesToolStripMenuItem";
+            buyGamesToolStripMenuItem.Size = new Size(224, 26);
+            buyGamesToolStripMenuItem.Tag = "buy";
+            buyGamesToolStripMenuItem.Text = "Buy Games";
+            buyGamesToolStripMenuItem.Click += ShowNewForm;
             // 
             // viewMenu
             // 
@@ -200,7 +227,7 @@
             toolStrip.Items.AddRange(new ToolStripItem[] { toolStripSeparator1, toolStripSeparator2 });
             toolStrip.Location = new Point(0, 30);
             toolStrip.Name = "toolStrip";
-            toolStrip.Size = new Size(843, 25);
+            toolStrip.Size = new Size(1323, 25);
             toolStrip.TabIndex = 1;
             toolStrip.Text = "ToolStrip";
             // 
@@ -218,10 +245,10 @@
             // 
             statusStrip.ImageScalingSize = new Size(20, 20);
             statusStrip.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel });
-            statusStrip.Location = new Point(0, 777);
+            statusStrip.Location = new Point(0, 990);
             statusStrip.Name = "statusStrip";
             statusStrip.Padding = new Padding(1, 0, 19, 0);
-            statusStrip.Size = new Size(843, 26);
+            statusStrip.Size = new Size(1323, 26);
             statusStrip.TabIndex = 2;
             statusStrip.Text = "StatusStrip";
             // 
@@ -235,7 +262,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(843, 803);
+            ClientSize = new Size(1323, 1016);
             Controls.Add(statusStrip);
             Controls.Add(toolStrip);
             Controls.Add(menuStrip);
@@ -281,6 +308,9 @@
         private ToolStripMenuItem maintenanceToolStripMenuItem;
         private ToolStripMenuItem gamesToolStripMenuItem;
         private ToolStripMenuItem platformsToolStripMenuItem;
+        private ToolStripMenuItem browseGamesToolStripMenuItem;
+        private ToolStripMenuItem browsePlatformsToolStripMenuItem;
+        private ToolStripMenuItem buyGamesToolStripMenuItem;
     }
 }
 

@@ -36,6 +36,15 @@ namespace LibraryGames
                 case "Games":
                     childForm = new frmGames();
                     break;
+                case "brwsGames":
+                    childForm = new frmBrowseGames();
+                    break;
+                case "brwsePlats":
+                    childForm = new frmBrowsePlatforms();
+                    break;
+                case "buy":
+                    childForm = new frmBuy();
+                    break;
             }
 
             if (childForm != null)
