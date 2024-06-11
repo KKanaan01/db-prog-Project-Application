@@ -34,6 +34,7 @@ namespace LibraryGames
         int? nextPlatformId;
 
         private FormState currentState;
+        private int? rowNumber;
 
         #endregion
 
@@ -259,6 +260,8 @@ namespace LibraryGames
 
             lastGameId = Convert.ToInt32(dataRow["LastGameId"]);
             lastPlatformId = Convert.ToInt32(dataRow["LastPlatformId"]);
+
+            rowNumber = Convert.ToInt32(dataRow["RowNumber"]);
         }
 
         private DataTable GetLibraryGameDataTable()
@@ -310,6 +313,7 @@ namespace LibraryGames
 
             cmbGame.SelectedValue = dataRow["GameId"];
             cmbPlatforms.SelectedValue = PlatformId;
+            DisplayPosition();
 
         }
 
@@ -388,6 +392,12 @@ namespace LibraryGames
         private void DisplayCatchMessage(Exception ex)
         {
             MessageBox.Show(ex.Message, ex.GetType().ToString());
+        }
+
+        private void DisplayPosition()
+        {
+            DataTable dt = DataAccess.GetData("SELECT * FROM Library_Games");
+            this.DisplayParentStatusStripMessage($"Loaded {rowNumber} out of {dt.Rows.Count} Games");
         }
         #endregion
 
