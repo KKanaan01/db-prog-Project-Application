@@ -82,7 +82,7 @@
             Controls.Add(dgvPlats);
             Controls.Add(grpPlatforms);
             Name = "frmBrowsePlatforms";
-            Text = "frmBrowsePlatforms";
+            Text = "Browse Platforms";
             Load += frmBrowsePlatforms_Load;
             grpPlatforms.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvPlats).EndInit();

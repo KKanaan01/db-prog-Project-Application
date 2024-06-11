@@ -45,7 +45,7 @@
             cmbGames.FormattingEnabled = true;
             cmbGames.Location = new Point(12, 142);
             cmbGames.Name = "cmbGames";
-            cmbGames.Size = new Size(243, 28);
+            cmbGames.Size = new Size(273, 28);
             cmbGames.TabIndex = 0;
             // 
             // cmbPlatforms
@@ -53,7 +53,7 @@
             cmbPlatforms.FormattingEnabled = true;
             cmbPlatforms.Location = new Point(12, 251);
             cmbPlatforms.Name = "cmbPlatforms";
-            cmbPlatforms.Size = new Size(243, 28);
+            cmbPlatforms.Size = new Size(273, 28);
             cmbPlatforms.TabIndex = 1;
             // 
             // lstCart
@@ -103,7 +103,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(91, 119);
+            label1.Location = new Point(100, 119);
             label1.Name = "label1";
             label1.Size = new Size(92, 20);
             label1.TabIndex = 7;
@@ -112,7 +112,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(73, 228);
+            label2.Location = new Point(91, 228);
             label2.Name = "label2";
             label2.Size = new Size(110, 20);
             label2.TabIndex = 8;
@@ -144,7 +144,7 @@
             Controls.Add(cmbPlatforms);
             Controls.Add(cmbGames);
             Name = "frmBuy";
-            Text = "frmBuy";
+            Text = "Shop";
             Load += frmBuy_Load;
             ResumeLayout(false);
             PerformLayout();

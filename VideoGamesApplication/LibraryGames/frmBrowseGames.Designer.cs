@@ -82,7 +82,7 @@
             Controls.Add(dgvGames);
             Controls.Add(grpGame);
             Name = "frmBrowseGames";
-            Text = "frmBrowseGames";
+            Text = "Browse Games";
             Load += frmBrowseGames_Load;
             grpGame.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvGames).EndInit();

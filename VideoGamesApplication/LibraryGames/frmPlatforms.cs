@@ -87,12 +87,16 @@ namespace LibraryGames
         {
             SetState(FormState.Add);
             txtPlatformID.ReadOnly = true;
+            this.DisplayParentStatusStripMessage("Adding...");
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
+                this.DisplayParentStatusStripMessage("Editing...");
+                txtPlatformID.ReadOnly = true;
+
                 if (currentState == FormState.View)
                 {
                     SetState(FormState.Edit);
@@ -105,6 +109,10 @@ namespace LibraryGames
                         {
                             CreatePlatform();
                             LoadFirstPlatform();
+                        }
+                        else
+                        {
+                            UpdatePlatform();
                         }
                         SetState(FormState.View);
                     }
@@ -355,6 +363,33 @@ ORDER BY PlatformName ASC";
             else
             {
                 MessageBox.Show("No rows affected");
+            }
+        }
+
+        public void UpdatePlatform()
+        {
+            string sql = $@"UPDATE [Platform]
+                SET
+                PlatformName = '{txtName.Text}',
+                ReleaseDate = '{txtDate.Text}',
+                Manufacturer = '{txtManufacturer.Text}',
+                [Description] = '{txtDesc.Text}',
+                Price = '{txtPrice.Text}'
+                WHERE PlatformID = '{txtPlatformID.Text}'";
+
+            int rowsAffected = DataAccess.SendData(sql);
+
+            if (rowsAffected == 0)
+            {
+                MessageBox.Show("No rows affected");
+            }
+            else if (rowsAffected == 1)
+            {
+                MessageBox.Show("Platform has been updated");
+            }
+            else
+            {
+                MessageBox.Show("Something went wrong");
             }
         }
         #endregion

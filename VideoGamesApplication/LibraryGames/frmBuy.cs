@@ -29,6 +29,7 @@ namespace LibraryGames
             {
                 LoadGames();
                 LoadPlatforms();
+                this.DisplayParentStatusStripMessage("Buying a Game...");
             }
             catch (Exception ex)
             {

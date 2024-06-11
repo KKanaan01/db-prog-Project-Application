@@ -104,6 +104,8 @@ namespace LibraryGames
         {
             try
             {
+                this.DisplayParentStatusStripMessage("Editing...");
+
                 if (currentState == FormState.View)
                 {
                     SetState(FormState.Edit);
@@ -385,7 +387,7 @@ ORDER BY Title ASC;";
             Genre = '{txtGenre.Text}',
             Rating = '{txtRating.Text}',
             DownloadSize = '{txtSize.Text}'
-            WHERE GameID = {txtGameID.Text}";
+            WHERE GameID = '{txtGameID.Text}'";
 
             int rowsAffected = DataAccess.SendData(sql);
 
