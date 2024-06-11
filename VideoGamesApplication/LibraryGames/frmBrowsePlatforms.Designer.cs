@@ -40,7 +40,7 @@
             // 
             grpPlatforms.Controls.Add(btnShow);
             grpPlatforms.Controls.Add(cmbPlatformList);
-            grpPlatforms.Location = new Point(255, 12);
+            grpPlatforms.Location = new Point(38, 39);
             grpPlatforms.Name = "grpPlatforms";
             grpPlatforms.Size = new Size(306, 162);
             grpPlatforms.TabIndex = 0;
@@ -68,17 +68,17 @@
             // dgvPlats
             // 
             dgvPlats.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPlats.Location = new Point(12, 208);
+            dgvPlats.Location = new Point(133, 242);
             dgvPlats.Name = "dgvPlats";
             dgvPlats.RowHeadersWidth = 51;
-            dgvPlats.Size = new Size(776, 230);
+            dgvPlats.Size = new Size(1050, 230);
             dgvPlats.TabIndex = 1;
             // 
             // frmBrowsePlatforms
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1233, 524);
             Controls.Add(dgvPlats);
             Controls.Add(grpPlatforms);
             Name = "frmBrowsePlatforms";

@@ -40,7 +40,7 @@
             // 
             grpGame.Controls.Add(btnShow);
             grpGame.Controls.Add(cmbGameList);
-            grpGame.Location = new Point(290, 12);
+            grpGame.Location = new Point(12, 32);
             grpGame.Name = "grpGame";
             grpGame.Size = new Size(288, 146);
             grpGame.TabIndex = 0;
@@ -68,17 +68,17 @@
             // dgvGames
             // 
             dgvGames.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvGames.Location = new Point(31, 196);
+            dgvGames.Location = new Point(231, 224);
             dgvGames.Name = "dgvGames";
             dgvGames.RowHeadersWidth = 51;
-            dgvGames.Size = new Size(799, 263);
+            dgvGames.Size = new Size(957, 284);
             dgvGames.TabIndex = 1;
             // 
             // frmBrowseGames
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(854, 483);
+            ClientSize = new Size(1299, 567);
             Controls.Add(dgvGames);
             Controls.Add(grpGame);
             Name = "frmBrowseGames";

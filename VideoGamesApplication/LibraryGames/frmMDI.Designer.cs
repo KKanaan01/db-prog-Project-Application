@@ -70,7 +70,7 @@
             menuStrip.MdiWindowListItem = windowsMenu;
             menuStrip.Name = "menuStrip";
             menuStrip.Padding = new Padding(8, 3, 0, 3);
-            menuStrip.Size = new Size(1323, 30);
+            menuStrip.Size = new Size(1808, 30);
             menuStrip.TabIndex = 0;
             menuStrip.Text = "MenuStrip";
             // 
@@ -236,7 +236,7 @@
             toolStrip.Items.AddRange(new ToolStripItem[] { toolStripSeparator1, toolStripSeparator2 });
             toolStrip.Location = new Point(0, 30);
             toolStrip.Name = "toolStrip";
-            toolStrip.Size = new Size(1323, 25);
+            toolStrip.Size = new Size(1808, 25);
             toolStrip.TabIndex = 1;
             toolStrip.Text = "ToolStrip";
             // 
@@ -254,10 +254,10 @@
             // 
             statusStrip.ImageScalingSize = new Size(20, 20);
             statusStrip.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel });
-            statusStrip.Location = new Point(0, 696);
+            statusStrip.Location = new Point(0, 974);
             statusStrip.Name = "statusStrip";
             statusStrip.Padding = new Padding(1, 0, 19, 0);
-            statusStrip.Size = new Size(1323, 26);
+            statusStrip.Size = new Size(1808, 26);
             statusStrip.TabIndex = 2;
             statusStrip.Text = "StatusStrip";
             // 
@@ -271,7 +271,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1323, 722);
+            ClientSize = new Size(1808, 1000);
             Controls.Add(statusStrip);
             Controls.Add(toolStrip);
             Controls.Add(menuStrip);
@@ -280,7 +280,7 @@
             Margin = new Padding(4, 5, 4, 5);
             Name = "frmMDI";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmMDI";
+            Text = "Menu";
             Load += frmMDIParent_Load;
             menuStrip.ResumeLayout(false);
             menuStrip.PerformLayout();

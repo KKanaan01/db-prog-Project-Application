@@ -146,28 +146,28 @@ namespace LibraryGames
 
         private void frmMDIParent_Load(object sender, EventArgs e)
         {
-            //frmSplash splash = new frmSplash();
-            //frmLogin login = new frmLogin();
+            frmSplash splash = new frmSplash();
+            frmLogin login = new frmLogin();
 
-            //splash.ShowDialog();
+            splash.ShowDialog();
 
-            //if (splash.DialogResult != DialogResult.OK)
-            //{
-            //    this.Close();
-            //}
-            //else
-            //{
-            //    login.ShowDialog();
-            //}
+            if (splash.DialogResult != DialogResult.OK)
+            {
+                this.Close();
+            }
+            else
+            {
+                login.ShowDialog();
+            }
 
-            //if (login.DialogResult != DialogResult.OK)
-            //{
-            //    this.Close();
-            //}
-            //else
-            //{
-            //    this.Show();
-            //}
+            if (login.DialogResult != DialogResult.OK)
+            {
+                this.Close();
+            }
+            else
+            {
+                this.Show();
+            }
         }
 
 
