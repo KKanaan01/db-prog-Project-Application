@@ -118,7 +118,7 @@ namespace LibraryGames
                     }
                     else
                     {
-                        MessageBox.Show("Solve your error ");
+                        MessageBox.Show("Solve your errors");
                     }
 
                 }
@@ -131,11 +131,24 @@ namespace LibraryGames
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to delete this Platform?", "Are you sure",
-              MessageBoxButtons.YesNo) == DialogResult.Yes)
+            try
             {
-                DeletePlatform();
-                LoadFirstPlatform();
+                string platformId = txtPlatformID.Text;
+                int assignments = Convert.ToInt32(DataAccess.GetValue($"SELECT COUNT(1) FROM Library_Games WHERE PlatformId = {platformId};"));
+
+                if (assignments == 0)
+                {
+                    DeletePlatform();
+                    LoadFirstPlatform() ;
+                }
+                else
+                {
+                    MessageBox.Show("This Platform could not be deleted because it is associated with a game in the database.");
+                }
+            }
+            catch (Exception ex)
+            {
+                DisplayCatchMessage(ex);
             }
         }
 
@@ -302,6 +315,44 @@ ORDER BY PlatformName ASC";
             txtPrice.ReadOnly = readOnly;
             txtDesc.ReadOnly = readOnly;
         }
+
+        private void txt_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            string errMsg = null;
+
+            if (txt.Text == string.Empty)
+            {
+                errMsg = $"{txt.Tag} is required.";
+                e.Cancel = true;
+            }
+
+            if (sender == txtPrice)
+            {
+                if (!isNumeric(txt.Text))
+                {
+                    errMsg = $"{txt.Tag} must be a valid price";
+                    e.Cancel = true;
+                }
+            }
+
+            if(sender == txtDate)
+            {
+                if (!DateTime.TryParse(txt.Text, out DateTime dateValue))
+                {
+                    errMsg = $"{txt.Tag} must be a valid date";
+                    e.Cancel = true;
+                }
+            }
+
+            errorProvider1.SetError(txt, errMsg);
+        }
+
+
+        private bool isNumeric(string value)
+        {
+            return decimal.TryParse(value, out _);
+        }
         #endregion
 
         #region Make it easier methods
@@ -315,6 +366,8 @@ ORDER BY PlatformName ASC";
             DataTable dt = DataAccess.GetData("SELECT * FROM Platform");
             this.DisplayParentStatusStripMessage($"Loaded {rowNumber} out of {dt.Rows.Count} Platforms");
         }
+
+
         #endregion
 
         #region Action Methods
@@ -331,10 +384,10 @@ ORDER BY PlatformName ASC";
                         Price)
                      VALUES
                      (
-                        '{txtName.Text.Trim()}'
+                        '{DataAccess.SQLFix(txtName.Text.Trim())}'
                         ,'{txtDate.Text.Trim()}'
-                        ,'{txtManufacturer.Text}'
-                        ,'{txtDesc.Text}'
+                        ,'{DataAccess.SQLFix(txtManufacturer.Text.Trim())}'
+                        ,'{DataAccess.SQLFix(txtDesc.Text.Trim())}'
                         ,'{txtPrice.Text}'
                      )";
 
@@ -370,10 +423,10 @@ ORDER BY PlatformName ASC";
         {
             string sql = $@"UPDATE [Platform]
                 SET
-                PlatformName = '{txtName.Text}',
+                PlatformName = '{DataAccess.SQLFix(txtName.Text.Trim())}',
                 ReleaseDate = '{txtDate.Text}',
-                Manufacturer = '{txtManufacturer.Text}',
-                [Description] = '{txtDesc.Text}',
+                Manufacturer = '{DataAccess.SQLFix(txtManufacturer.Text)}',
+                [Description] = '{DataAccess.SQLFix(txtDesc.Text)}',
                 Price = '{txtPrice.Text}'
                 WHERE PlatformID = '{txtPlatformID.Text}'";
 

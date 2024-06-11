@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             btnLast = new Button();
             btnNext = new Button();
@@ -50,7 +51,9 @@
             label7 = new Label();
             btnDelete = new Button();
             grpPlats = new GroupBox();
+            errorProvider1 = new ErrorProvider(components);
             grpPlats.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -139,6 +142,7 @@
             txtPlatformID.Name = "txtPlatformID";
             txtPlatformID.Size = new Size(250, 27);
             txtPlatformID.TabIndex = 9;
+            txtPlatformID.Tag = "platform";
             // 
             // txtDesc
             // 
@@ -146,6 +150,8 @@
             txtDesc.Name = "txtDesc";
             txtDesc.Size = new Size(123, 27);
             txtDesc.TabIndex = 10;
+            txtDesc.Tag = "desc";
+            txtDesc.Validating += txt_Validating;
             // 
             // txtManufacturer
             // 
@@ -153,6 +159,8 @@
             txtManufacturer.Name = "txtManufacturer";
             txtManufacturer.Size = new Size(250, 27);
             txtManufacturer.TabIndex = 11;
+            txtManufacturer.Tag = "manufacturer";
+            txtManufacturer.Validating += txt_Validating;
             // 
             // txtDate
             // 
@@ -160,6 +168,8 @@
             txtDate.Name = "txtDate";
             txtDate.Size = new Size(250, 27);
             txtDate.TabIndex = 12;
+            txtDate.Tag = "date";
+            txtDate.Validating += txt_Validating;
             // 
             // txtName
             // 
@@ -167,6 +177,8 @@
             txtName.Name = "txtName";
             txtName.Size = new Size(250, 27);
             txtName.TabIndex = 13;
+            txtName.Tag = "name";
+            txtName.Validating += txt_Validating;
             // 
             // label2
             // 
@@ -224,6 +236,8 @@
             txtPrice.Name = "txtPrice";
             txtPrice.Size = new Size(84, 27);
             txtPrice.TabIndex = 19;
+            txtPrice.Tag = "price";
+            txtPrice.Validating += txt_Validating;
             // 
             // label7
             // 
@@ -266,6 +280,10 @@
             grpPlats.TabStop = false;
             grpPlats.Text = "Information";
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // frmPlatforms
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -286,6 +304,7 @@
             Load += frmPlatforms_Load;
             grpPlats.ResumeLayout(false);
             grpPlats.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -314,5 +333,6 @@
         private Label label7;
         private Button btnDelete;
         private GroupBox grpPlats;
+        private ErrorProvider errorProvider1;
     }
 }

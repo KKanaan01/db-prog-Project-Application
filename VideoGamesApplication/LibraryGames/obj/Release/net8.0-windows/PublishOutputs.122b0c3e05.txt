@@ -1,0 +1,12 @@
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\bin\Release\net8.0-windows\app.publish\LibraryGames.exe
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\bin\Release\net8.0-windows\app.publish\LibraryGames.dll
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\bin\Release\net8.0-windows\app.publish\LibraryGames.deps.json
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\bin\Release\net8.0-windows\app.publish\LibraryGames.runtimeconfig.json
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\bin\Release\net8.0-windows\app.publish\LibraryGames.dll.config
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\bin\Release\net8.0-windows\app.publish\LibraryGames.pdb
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\bin\Release\net8.0-windows\app.publish\System.Data.SqlClient.dll
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\bin\Release\net8.0-windows\app.publish\runtimes\win-arm64\native\sni.dll
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\bin\Release\net8.0-windows\app.publish\runtimes\win-x64\native\sni.dll
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\bin\Release\net8.0-windows\app.publish\runtimes\win-x86\native\sni.dll
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\bin\Release\net8.0-windows\app.publish\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\repos\LAST SEMESTER\Database Programming\Project\db-prog-Project-Application\VideoGamesApplication\LibraryGames\bin\Release\net8.0-windows\app.publish\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

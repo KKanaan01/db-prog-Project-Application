@@ -29,6 +29,9 @@ namespace LibraryGames
 
         public static object GetValue(string sql)
         {
+
+            sql = SQLCleaner(sql);
+            
             using (SqlConnection conn = new SqlConnection(getConnectionString()))
             {
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
@@ -64,6 +67,19 @@ namespace LibraryGames
         public static int? GetInteger(this DataRow dataRow, string columnName)
         {
             return dataRow[columnName] != DBNull.Value ? Convert.ToInt32(dataRow[columnName]) : null;
+        }
+
+        public static string SQLFix(string str)
+        {
+            return str.Replace("'" , "''");
+        }
+
+        private static string SQLCleaner(string sqlStatement)
+        {
+            while (sqlStatement.Contains("  "))
+                sqlStatement = sqlStatement.Replace("  ", " ");
+
+            return sqlStatement.Replace(Environment.NewLine, "");
         }
 
         private static string getConnectionString()

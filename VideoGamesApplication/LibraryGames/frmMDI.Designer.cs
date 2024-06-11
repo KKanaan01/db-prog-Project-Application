@@ -37,6 +37,7 @@
             maintenanceToolStripMenuItem = new ToolStripMenuItem();
             gamesToolStripMenuItem = new ToolStripMenuItem();
             platformsToolStripMenuItem = new ToolStripMenuItem();
+            libraryGamesToolStripMenuItem = new ToolStripMenuItem();
             browseGamesToolStripMenuItem = new ToolStripMenuItem();
             browsePlatformsToolStripMenuItem = new ToolStripMenuItem();
             buyGamesToolStripMenuItem = new ToolStripMenuItem();
@@ -56,7 +57,6 @@
             statusStrip = new StatusStrip();
             toolStripStatusLabel = new ToolStripStatusLabel();
             toolTip = new ToolTip(components);
-            libraryGamesToolStripMenuItem = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             toolStrip.SuspendLayout();
             statusStrip.SuspendLayout();
@@ -109,7 +109,7 @@
             // gamesToolStripMenuItem
             // 
             gamesToolStripMenuItem.Name = "gamesToolStripMenuItem";
-            gamesToolStripMenuItem.Size = new Size(224, 26);
+            gamesToolStripMenuItem.Size = new Size(207, 26);
             gamesToolStripMenuItem.Tag = "Games";
             gamesToolStripMenuItem.Text = "Games";
             gamesToolStripMenuItem.Click += ShowNewForm;
@@ -117,15 +117,23 @@
             // platformsToolStripMenuItem
             // 
             platformsToolStripMenuItem.Name = "platformsToolStripMenuItem";
-            platformsToolStripMenuItem.Size = new Size(224, 26);
+            platformsToolStripMenuItem.Size = new Size(207, 26);
             platformsToolStripMenuItem.Tag = "Platforms";
             platformsToolStripMenuItem.Text = "Platforms";
             platformsToolStripMenuItem.Click += ShowNewForm;
             // 
+            // libraryGamesToolStripMenuItem
+            // 
+            libraryGamesToolStripMenuItem.Name = "libraryGamesToolStripMenuItem";
+            libraryGamesToolStripMenuItem.Size = new Size(207, 26);
+            libraryGamesToolStripMenuItem.Tag = "library";
+            libraryGamesToolStripMenuItem.Text = "Library Games";
+            libraryGamesToolStripMenuItem.Click += ShowNewForm;
+            // 
             // browseGamesToolStripMenuItem
             // 
             browseGamesToolStripMenuItem.Name = "browseGamesToolStripMenuItem";
-            browseGamesToolStripMenuItem.Size = new Size(224, 26);
+            browseGamesToolStripMenuItem.Size = new Size(207, 26);
             browseGamesToolStripMenuItem.Tag = "brwsGames";
             browseGamesToolStripMenuItem.Text = "Browse Games";
             browseGamesToolStripMenuItem.Click += ShowNewForm;
@@ -133,7 +141,7 @@
             // browsePlatformsToolStripMenuItem
             // 
             browsePlatformsToolStripMenuItem.Name = "browsePlatformsToolStripMenuItem";
-            browsePlatformsToolStripMenuItem.Size = new Size(224, 26);
+            browsePlatformsToolStripMenuItem.Size = new Size(207, 26);
             browsePlatformsToolStripMenuItem.Tag = "brwsePlats";
             browsePlatformsToolStripMenuItem.Text = "Browse Platforms";
             browsePlatformsToolStripMenuItem.Click += ShowNewForm;
@@ -141,7 +149,7 @@
             // buyGamesToolStripMenuItem
             // 
             buyGamesToolStripMenuItem.Name = "buyGamesToolStripMenuItem";
-            buyGamesToolStripMenuItem.Size = new Size(224, 26);
+            buyGamesToolStripMenuItem.Size = new Size(207, 26);
             buyGamesToolStripMenuItem.Tag = "buy";
             buyGamesToolStripMenuItem.Text = "Buy Games";
             buyGamesToolStripMenuItem.Click += ShowNewForm;
@@ -246,7 +254,7 @@
             // 
             statusStrip.ImageScalingSize = new Size(20, 20);
             statusStrip.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel });
-            statusStrip.Location = new Point(0, 990);
+            statusStrip.Location = new Point(0, 696);
             statusStrip.Name = "statusStrip";
             statusStrip.Padding = new Padding(1, 0, 19, 0);
             statusStrip.Size = new Size(1323, 26);
@@ -259,19 +267,11 @@
             toolStripStatusLabel.Size = new Size(168, 20);
             toolStripStatusLabel.Text = "Welcome to Game Hub!";
             // 
-            // libraryGamesToolStripMenuItem
-            // 
-            libraryGamesToolStripMenuItem.Name = "libraryGamesToolStripMenuItem";
-            libraryGamesToolStripMenuItem.Size = new Size(224, 26);
-            libraryGamesToolStripMenuItem.Tag = "library";
-            libraryGamesToolStripMenuItem.Text = "Library Games";
-            libraryGamesToolStripMenuItem.Click += ShowNewForm;
-            // 
             // frmMDI
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1323, 1016);
+            ClientSize = new Size(1323, 722);
             Controls.Add(statusStrip);
             Controls.Add(toolStrip);
             Controls.Add(menuStrip);
@@ -279,6 +279,7 @@
             MainMenuStrip = menuStrip;
             Margin = new Padding(4, 5, 4, 5);
             Name = "frmMDI";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmMDI";
             Load += frmMDIParent_Load;
             menuStrip.ResumeLayout(false);

@@ -73,6 +73,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmSplash";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Video Games";
             ResumeLayout(false);
             PerformLayout();

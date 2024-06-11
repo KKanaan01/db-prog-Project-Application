@@ -92,11 +92,17 @@ namespace LibraryGames
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to delete this Game?", "Are you sure",
-             MessageBoxButtons.YesNo) == DialogResult.Yes)
+            string gameId = txtGameID.Text;
+            int assignments = Convert.ToInt32(DataAccess.GetValue($"SELECT COUNT(1) FROM Library_Games WHERE GameId = {gameId};"));
+
+            if (assignments == 0)
             {
                 DeleteGame();
                 LoadFirstGame();
+            }
+            else
+            {
+                MessageBox.Show("This Game could not be deleted because it is associated with a platform in the database.");
             }
         }
 
@@ -130,7 +136,7 @@ namespace LibraryGames
                     }
                     else
                     {
-                        MessageBox.Show("Solve your error");
+                        MessageBox.Show("Solve your errors");
                     }
 
                 }
@@ -307,6 +313,43 @@ ORDER BY Title ASC;";
             txtRating.ReadOnly = readOnly;
             txtSize.ReadOnly = readOnly;
         }
+
+        private void txt_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            string errMsg = null;
+
+            if (txt.Text == string.Empty)
+            {
+                errMsg = $"{txt.Tag} is required.";
+                e.Cancel = true;
+            }
+
+            if (sender == txtPrice || sender == txtRating || sender == txtSize)
+            {
+                if (!isNumeric(txt.Text))
+                {
+                    errMsg = $"{txt.Tag} must be a valid number";
+                    e.Cancel = true;
+                }
+            }
+
+            if (sender == txtDate)
+            {
+                if (!DateTime.TryParse(txt.Text, out DateTime dateValue))
+                {
+                    errMsg = $"{txt.Tag} must be a valid date";
+                    e.Cancel = true;
+                }
+            }
+
+            errorProvider1.SetError(txt, errMsg);
+        }
+
+        private bool isNumeric(string value)
+        {
+            return decimal.TryParse(value, out _);
+        }
         #endregion
 
         #region Make it easier Methods
@@ -338,11 +381,11 @@ ORDER BY Title ASC;";
                      )
                      VALUES
                      (
-                        '{txtTitle.Text.Trim()}'
+                        '{DataAccess.SQLFix(txtTitle.Text.Trim())}'
                         ,'{txtDate.Text.Trim()}'
-                        ,'{txtPublisher.Text}'
+                        ,'{DataAccess.SQLFix(txtPublisher.Text.Trim())}'
                         ,'{txtPrice.Text}'
-                        ,'{txtGenre.Text}'
+                        ,'{DataAccess.SQLFix(txtGenre.Text.Trim())}'
                         ,' {txtRating.Text}'
                         ,'{txtSize.Text}'
                      )";
@@ -380,11 +423,11 @@ ORDER BY Title ASC;";
         {
             string sql = $@"UPDATE Game
             SET 
-            Title = '{txtTitle.Text}',
+            Title = '{DataAccess.SQLFix(txtTitle.Text.Trim())}',
             ReleaseDate = '{txtDate.Text}',
-            Publisher = '{txtPublisher.Text}',
+            Publisher = '{DataAccess.SQLFix(txtPublisher.Text.Trim())}',
             Price = '{txtPrice.Text}',
-            Genre = '{txtGenre.Text}',
+            Genre = '{DataAccess.SQLFix(txtGenre.Text.Trim())}',
             Rating = '{txtRating.Text}',
             DownloadSize = '{txtSize.Text}'
             WHERE GameID = '{txtGameID.Text}'";

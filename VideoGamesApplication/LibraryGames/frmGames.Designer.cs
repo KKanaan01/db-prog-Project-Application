@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             grpNavigation = new GroupBox();
             btnCancel = new Button();
             btnSave = new Button();
@@ -53,7 +54,9 @@
             txtGenre = new TextBox();
             txtTitle = new TextBox();
             txtGameID = new TextBox();
+            errorProvider1 = new ErrorProvider(components);
             grpNavigation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // grpNavigation
@@ -247,6 +250,8 @@
             txtPrice.Name = "txtPrice";
             txtPrice.Size = new Size(95, 27);
             txtPrice.TabIndex = 10;
+            txtPrice.Tag = "price";
+            txtPrice.Validating += txt_Validating;
             // 
             // txtSize
             // 
@@ -254,6 +259,8 @@
             txtSize.Name = "txtSize";
             txtSize.Size = new Size(107, 27);
             txtSize.TabIndex = 9;
+            txtSize.Tag = "size";
+            txtSize.Validating += txt_Validating;
             // 
             // txtRating
             // 
@@ -261,6 +268,8 @@
             txtRating.Name = "txtRating";
             txtRating.Size = new Size(95, 27);
             txtRating.TabIndex = 8;
+            txtRating.Tag = "rating";
+            txtRating.Validating += txt_Validating;
             // 
             // txtDate
             // 
@@ -268,6 +277,8 @@
             txtDate.Name = "txtDate";
             txtDate.Size = new Size(266, 27);
             txtDate.TabIndex = 7;
+            txtDate.Tag = "date";
+            txtDate.Validating += txt_Validating;
             // 
             // txtPublisher
             // 
@@ -275,6 +286,8 @@
             txtPublisher.Name = "txtPublisher";
             txtPublisher.Size = new Size(266, 27);
             txtPublisher.TabIndex = 6;
+            txtPublisher.Tag = "publisher";
+            txtPublisher.Validating += txt_Validating;
             // 
             // txtGenre
             // 
@@ -282,6 +295,8 @@
             txtGenre.Name = "txtGenre";
             txtGenre.Size = new Size(266, 27);
             txtGenre.TabIndex = 5;
+            txtGenre.Tag = "genre";
+            txtGenre.Validating += txt_Validating;
             // 
             // txtTitle
             // 
@@ -289,6 +304,8 @@
             txtTitle.Name = "txtTitle";
             txtTitle.Size = new Size(266, 27);
             txtTitle.TabIndex = 4;
+            txtTitle.Tag = "title";
+            txtTitle.Validating += txt_Validating;
             // 
             // txtGameID
             // 
@@ -296,6 +313,11 @@
             txtGameID.Name = "txtGameID";
             txtGameID.Size = new Size(266, 27);
             txtGameID.TabIndex = 0;
+            txtGameID.Tag = "gameid";
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
             // 
             // frmGames
             // 
@@ -308,6 +330,7 @@
             Load += frmGames_Load;
             grpNavigation.ResumeLayout(false);
             grpNavigation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
         }
 
@@ -337,5 +360,6 @@
         private Button btnNext;
         private Button btnPrevious;
         private Button btnFirst;
+        private ErrorProvider errorProvider1;
     }
 }
