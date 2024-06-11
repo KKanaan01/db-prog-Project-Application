@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="LibraryGames.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="LibraryGames.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -62,13 +62,13 @@
       <dsig:DigestValue>/8UN1MM+mIN/QYAlWKalkiV5W1BSPB6QBn9RCbOytz4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LibraryGames.dll" size="235520">
+  <file name="LibraryGames.dll" size="238080">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>TK/AojiGgPBpwHFem1LeQENQHU/0/rsd8i4hMpz7ULI=</dsig:DigestValue>
+      <dsig:DigestValue>tdTyJghkWcxzwDrJZBsQklq1zhd4L3JJ5KD02Wh+GkU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="LibraryGames.dll.config" size="225">
@@ -80,13 +80,13 @@
       <dsig:DigestValue>H/bkQVgq9AL8II5siDi5/u0L6zUJqExGFs/8q4pZPEc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LibraryGames.exe" size="142848">
+  <file name="LibraryGames.exe" size="142336">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ftNfHVqMfna3DI1L9Ak5DEp03wDZNTTFLwU3efdykOQ=</dsig:DigestValue>
+      <dsig:DigestValue>6mSH4rZVe2kRTrTfA/Eiocv17uMrbCwF4mCiCN5gYNg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="LibraryGames.runtimeconfig.json" size="458">

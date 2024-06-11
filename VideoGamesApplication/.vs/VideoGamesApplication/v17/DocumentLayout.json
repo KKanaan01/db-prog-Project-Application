@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D5791594-F35A-4CB8-A8C3-1F22211AC52E}|LibraryGames\\LibraryGames.csproj|C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\librarygames\\frmmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D5791594-F35A-4CB8-A8C3-1F22211AC52E}|LibraryGames\\LibraryGames.csproj|c:\\repos\\last semester\\database programming\\project\\db-prog-project-application\\videogamesapplication\\librarygames\\librarygames.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{D5791594-F35A-4CB8-A8C3-1F22211AC52E}|LibraryGames\\LibraryGames.csproj|solutionrelative:librarygames\\librarygames.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5791594-F35A-4CB8-A8C3-1F22211AC52E}|LibraryGames\\LibraryGames.csproj|c:\\repos\\last semester\\database programming\\project\\db-prog-project-application\\videogamesapplication\\librarygames\\properties\\publishprofiles\\clickonceprofile.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D5791594-F35A-4CB8-A8C3-1F22211AC52E}|LibraryGames\\LibraryGames.csproj|solutionrelative:librarygames\\properties\\publishprofiles\\clickonceprofile.pubxml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5791594-F35A-4CB8-A8C3-1F22211AC52E}|LibraryGames\\LibraryGames.csproj|c:\\repos\\last semester\\database programming\\project\\db-prog-project-application\\videogamesapplication\\librarygames\\frmmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D5791594-F35A-4CB8-A8C3-1F22211AC52E}|LibraryGames\\LibraryGames.csproj|solutionrelative:librarygames\\frmmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D5791594-F35A-4CB8-A8C3-1F22211AC52E}|LibraryGames\\LibraryGames.csproj|c:\\repos\\last semester\\database programming\\project\\db-prog-project-application\\videogamesapplication\\librarygames\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D5791594-F35A-4CB8-A8C3-1F22211AC52E}|LibraryGames\\LibraryGames.csproj|C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\librarygames\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D5791594-F35A-4CB8-A8C3-1F22211AC52E}|LibraryGames\\LibraryGames.csproj|solutionrelative:librarygames\\splash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -19,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{D5791594-F35A-4CB8-A8C3-1F22211AC52E}|LibraryGames\\LibraryGames.csproj|solutionrelative:librarygames\\frmplatforms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D5791594-F35A-4CB8-A8C3-1F22211AC52E}|LibraryGames\\LibraryGames.csproj|c:\\repos\\last semester\\database programming\\project\\db-prog-project-application\\videogamesapplication\\librarygames\\frmgames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D5791594-F35A-4CB8-A8C3-1F22211AC52E}|LibraryGames\\LibraryGames.csproj|C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\librarygames\\frmgames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5791594-F35A-4CB8-A8C3-1F22211AC52E}|LibraryGames\\LibraryGames.csproj|solutionrelative:librarygames\\frmgames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -58,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,19 +78,43 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LibraryGames",
+              "DocumentMoniker": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\LibraryGames.csproj",
+              "RelativeDocumentMoniker": "LibraryGames\\LibraryGames.csproj",
+              "ToolTip": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\LibraryGames.csproj",
+              "RelativeToolTip": "LibraryGames\\LibraryGames.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-11T21:36:39.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ClickOnceProfile.pubxml",
+              "DocumentMoniker": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\Properties\\PublishProfiles\\ClickOnceProfile.pubxml",
+              "RelativeDocumentMoniker": "LibraryGames\\Properties\\PublishProfiles\\ClickOnceProfile.pubxml",
+              "ToolTip": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\Properties\\PublishProfiles\\ClickOnceProfile.pubxml",
+              "RelativeToolTip": "LibraryGames\\Properties\\PublishProfiles\\ClickOnceProfile.pubxml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-06-11T21:36:36.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Splash.cs [Design]",
               "DocumentMoniker": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\Splash.cs",
               "RelativeDocumentMoniker": "LibraryGames\\Splash.cs",
               "ToolTip": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\Splash.cs [Design]",
               "RelativeToolTip": "LibraryGames\\Splash.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T21:28:10.985Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-11T21:28:10.985Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "DataAccess.cs",
               "DocumentMoniker": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\DataAccess.cs",
               "RelativeDocumentMoniker": "LibraryGames\\DataAccess.cs",
@@ -90,12 +122,11 @@
               "RelativeToolTip": "LibraryGames\\DataAccess.cs",
               "ViewState": "AQIAAD8AAAAAAAAAAAAnwD0AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T14:32:38.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T14:32:38.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "frmMDI.cs",
               "DocumentMoniker": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\frmMDI.cs",
               "RelativeDocumentMoniker": "LibraryGames\\frmMDI.cs",
@@ -108,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "frmMDI.cs [Design]",
               "DocumentMoniker": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\frmMDI.cs",
               "RelativeDocumentMoniker": "LibraryGames\\frmMDI.cs",
@@ -120,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "frmLibraryGames.cs",
               "DocumentMoniker": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\frmLibraryGames.cs",
               "RelativeDocumentMoniker": "LibraryGames\\frmLibraryGames.cs",
@@ -128,24 +159,22 @@
               "RelativeToolTip": "LibraryGames\\frmLibraryGames.cs",
               "ViewState": "AQIAAGAAAAAAAAAAAAAkwIYAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T13:57:01.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T13:57:01.792Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "frmLibraryGames.cs [Design]",
               "DocumentMoniker": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\frmLibraryGames.cs",
               "RelativeDocumentMoniker": "LibraryGames\\frmLibraryGames.cs",
               "ToolTip": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\frmLibraryGames.cs [Design]",
               "RelativeToolTip": "LibraryGames\\frmLibraryGames.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T13:56:59.632Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-11T13:56:59.632Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "frmBuy.cs",
               "DocumentMoniker": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\frmBuy.cs",
               "RelativeDocumentMoniker": "LibraryGames\\frmBuy.cs",
@@ -157,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "frmBuy.cs [Design]",
               "DocumentMoniker": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\frmBuy.cs",
               "RelativeDocumentMoniker": "LibraryGames\\frmBuy.cs",
@@ -168,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "frmGames.cs",
               "DocumentMoniker": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\frmGames.cs",
               "RelativeDocumentMoniker": "LibraryGames\\frmGames.cs",
@@ -176,12 +205,11 @@
               "RelativeToolTip": "LibraryGames\\frmGames.cs",
               "ViewState": "AQIAADsBAAAAAAAAAADwv1IBAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T23:35:56.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T23:35:56.354Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "frmPlatforms.cs",
               "DocumentMoniker": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\frmPlatforms.cs",
               "RelativeDocumentMoniker": "LibraryGames\\frmPlatforms.cs",
@@ -189,32 +217,29 @@
               "RelativeToolTip": "LibraryGames\\frmPlatforms.cs",
               "ViewState": "AQIAAH0AAAAAAAAAAAAuwIwAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T18:17:43.55Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T18:17:43.55Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "frmGames.cs [Design]",
               "DocumentMoniker": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\frmGames.cs",
               "RelativeDocumentMoniker": "LibraryGames\\frmGames.cs",
               "ToolTip": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\frmGames.cs [Design]",
               "RelativeToolTip": "LibraryGames\\frmGames.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T21:45:30.199Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-09T21:45:30.199Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "frmPlatforms.cs [Design]",
               "DocumentMoniker": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\frmPlatforms.cs",
               "RelativeDocumentMoniker": "LibraryGames\\frmPlatforms.cs",
               "ToolTip": "C:\\repos\\LAST SEMESTER\\Database Programming\\Project\\db-prog-Project-Application\\VideoGamesApplication\\LibraryGames\\frmPlatforms.cs [Design]",
               "RelativeToolTip": "LibraryGames\\frmPlatforms.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T18:17:42.084Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-10T18:17:42.084Z"
             }
           ]
         }
