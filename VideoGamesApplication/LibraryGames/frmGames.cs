@@ -151,6 +151,7 @@ namespace LibraryGames
         {
             SetState(FormState.View);
             DisplayCurrentGame();
+            errorProvider1.Clear();
         }
         #endregion
 

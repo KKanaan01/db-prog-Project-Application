@@ -156,6 +156,7 @@ namespace LibraryGames
         {
             SetState(FormState.View);
             DisplayCurrentPlatform();
+            errorProvider1.Clear();
         }
         #endregion
 
