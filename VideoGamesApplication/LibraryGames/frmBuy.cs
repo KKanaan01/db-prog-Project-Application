@@ -53,8 +53,7 @@ namespace LibraryGames
             try
             {
                 BuyGame();
-                GameLists.Clear();
-                txtTotal.Text = string.Empty;
+                ClearingForm();
             }
             catch (Exception ex)
             {
@@ -81,7 +80,6 @@ namespace LibraryGames
             }
         }
         #endregion
-
 
         #region Load Data
 
@@ -210,6 +208,13 @@ namespace LibraryGames
         private void DisplayCatchMessage(Exception ex)
         {
             MessageBox.Show(ex.Message, ex.GetType().ToString());
+        }
+
+        private void ClearingForm()
+        {
+            GameLists.Clear();
+            lstCart.Items.Clear();
+            txtTotal.Text = string.Empty;
         }
         #endregion
     }
